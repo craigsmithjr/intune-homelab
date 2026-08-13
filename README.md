@@ -103,3 +103,9 @@ Practical effect: fewer prompts, no stored passwords in individual apps, and
 authentication that Conditional Access can evaluate centrally — the same PRT
 carries device state, which is what later allows a policy to require a compliant
 device before granting access.
+
+### Confirming Intune Management
+
+With enrollment complete, the device appears under **Intune → Devices → All
+devices** as a fully managed endpoint.
+<img width="1575" height="865" alt="image" src="https://github.com/user-attachments/assets/702fe995-773e-4cec-a158-0cf0ab92f40e" />
