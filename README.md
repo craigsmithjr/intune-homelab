@@ -219,4 +219,27 @@ sync, the install completed and Zoom appeared on the endpoint.
 
 <img width="1632" height="828" alt="image" src="https://github.com/user-attachments/assets/b727d732-21e5-4378-918e-d35cc137c150" />
 
+## Conclusion
 
+This lab covers the core of cloud-native Windows endpoint management: tenant and
+user setup, Entra join and Intune enrollment, dynamic group design, an Endpoint
+Security baseline, and application deployment — each verified from the endpoint
+rather than from the admin console alone.
+
+The most useful thing it produced was the failures. The Microsoft Store (new) app
+type could not deploy Zoom at all. A line-of-business MSI install started in the
+correct context and silently never completed, with no error surfaced beyond
+"Failed" and no entry in the log that most guidance points to
+A recurring theme: **the console is not the endpoint.** Intune reporting lags the
+device by up to an hour, a policy showing "Succeeded" only confirms delivery
+rather than effect
+
+### Next steps
+
+- **Compliance policies and Conditional Access** — the highest-value addition.
+  A compliance policy keyed on BitLocker and Defender state, enforced by a
+  Conditional Access rule that blocks non-compliant devices from Microsoft 365.
+- **Windows Update rings** — deferrals, deadlines, and update reporting.
+- **Windows Autopilot** — zero-touch provisioning with an Enrollment Status Page.
+- **Cross-browser policy** — importing Chrome and Firefox ADMX templates, since
+  Edge-only hardening leaves an obvious bypass.
