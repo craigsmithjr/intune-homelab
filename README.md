@@ -5,7 +5,7 @@ Microsoft Intune home lab: device enrollment, dynamic Entra groups, BitLocker an
 | Tool | Purpose |
 |---|---|
 | Microsoft Intune | Endpoint management, policy, and app deployment |
-| Microsoft Entra ID (P2 trial) | Identity, device objects, dynamic group membership |
+| Microsoft Entra ID (P1 trial) | Identity, device objects, dynamic group membership |
 | Microsoft 365 Admin Center | User and license management, Integrated apps |
 | Oracle VirtualBox 7 | Windows 11 test VM (vTPM 2.0, UEFI, Secure Boot) |
 | Windows 11 Pro | Managed endpoint |
@@ -115,6 +115,7 @@ devices** as a fully managed endpoint.
 Policy in Intune is assigned to Entra groups, so group structure determines what
 is manageable. A dynamic device group was created as the baseline target for all
 corporate Windows endpoints.
+(device.deviceTrustType -eq "AzureAD")
 
 <img width="1643" height="927" alt="image" src="https://github.com/user-attachments/assets/7e803cd6-7a1f-4eec-bc9f-a1bb8147d1f4" />
 
