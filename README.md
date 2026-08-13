@@ -209,8 +209,6 @@ per-user `.exe` from the standard download page).
 
 <img width="1629" height="865" alt="image" src="https://github.com/user-attachments/assets/27d8c8a2-0970-40cd-af57-88f38d7d527e" />
 
-<img width="1008" height="757" alt="image" src="https://github.com/user-attachments/assets/10d9e884-c2e7-48e2-8703-ef06592d3306" />
-
 
 Assigned as **Required** to a group containing the test *user*. The install
 reported Pending, then Failed. Nothing appeared in Program Files, Program Files
@@ -222,6 +220,9 @@ The assignment was moved from the user group to `SG-DEV-WIN-Corporate`. After a
 sync, the install completed and Zoom appeared on the endpoint.
 
 <img width="1632" height="828" alt="image" src="https://github.com/user-attachments/assets/b727d732-21e5-4378-918e-d35cc137c150" />
+
+<img width="1008" height="757" alt="image" src="https://github.com/user-attachments/assets/10d9e884-c2e7-48e2-8703-ef06592d3306" />
+
 
 ## Conclusion
 
