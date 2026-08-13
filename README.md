@@ -35,6 +35,56 @@ Business Premium license was assigned here so the account could enroll a device
 for automatic enrollment**, and the resulting error gives no indication that
 licensing is the cause.
 
+## Step 2 — Building the Endpoint and Enrolling It
+
+A Windows 11 VM was built in Oracle VirtualBox to act as the managed endpoint.
+Hardware settings were configured up front, since BitLocker later depends on
+them:
+
+| Setting | Value | Why |
+|---|---|---|
+| TPM | 2.0 | Required for BitLocker TPM-based protection |
+| Firmware | UEFI | TPM requires UEFI; BitLocker will not work on legacy BIOS |
+| Secure Boot | Enabled | Part of the boot measurement chain BitLocker binds to |
+| Base memory | 4096 MB | — |
+| Windows edition | Pro | BitLocker management is unavailable on Home |
+
+Getting TPM and UEFI set before installing Windows avoids reconfiguring the boot
+environment afterwards, which changes the measurements BitLocker relies on.
+
+### Enrolling the device
+
+Enrollment was performed manually from the endpoint to see the full flow rather
+than abstracting it behind Autopilot:
+
+**Settings → Accounts → Access work or school → Connect**, signing in with the
+standard user account created in Step 1.
+
+This performs a **Microsoft Entra join** — the work account becomes the primary
+identity on the device, rather than a registration layered on top of a personal
+account. The distinction matters:
+
+| | Entra registered | Entra joined |
+|---|---|---|
+| Device owner | The user | The organization |
+| Primary sign-in | Personal account | Work account |
+| Wipe scope | Selective (company data) | Full device |
+| Auto-enrollment | Not by default | Yes, when MDM scope permits |
+
+Automatic Intune enrollment on join is driven by **Entra ID → Mobility (MDM and
+WIP) → Microsoft Intune → MDM user scope**, which was set to **All**. Scope
+alone is not sufficient — the signing-in user must also hold an Intune license,
+or enrollment fails.
+
+### Verification
+
+The device appeared under **Intune → Devices → All devices** and under **Entra
+ID → Devices**, confirming both the directory object and MDM management.
+
+
+
+
+
 No admin roles were assigned. The account is a standard user by design, so that
 policy and app assignment can be tested against a realistic, non-privileged
 account rather than against Global Admin.
