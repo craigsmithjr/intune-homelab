@@ -212,3 +212,11 @@ Assigned as **Required** to a group containing the test *user*. The install
 reported Pending, then Failed. Nothing appeared in Program Files, Program Files
 (x86), or any Uninstall registry key.
 
+### Attempt 3 — Same app, assigned to a device group
+
+The assignment was moved from the user group to `SG-DEV-WIN-Corporate`. After a
+sync, the install completed and Zoom appeared on the endpoint.
+
+<img width="1632" height="828" alt="image" src="https://github.com/user-attachments/assets/b727d732-21e5-4378-918e-d35cc137c150" />
+
+
