@@ -41,13 +41,6 @@ A Windows 11 VM was built in Oracle VirtualBox to act as the managed endpoint.
 Hardware settings were configured up front, since BitLocker later depends on
 them:
 
-| Setting | Value | Why |
-|---|---|---|
-| TPM | 2.0 | Required for BitLocker TPM-based protection |
-| Firmware | UEFI | TPM requires UEFI; BitLocker will not work on legacy BIOS |
-| Secure Boot | Enabled | Part of the boot measurement chain BitLocker binds to |
-| Base memory | 4096 MB | — |
-| Windows edition | Pro | BitLocker management is unavailable on Home |
 
 Getting TPM and UEFI set before installing Windows avoids reconfiguring the boot
 environment afterwards, which changes the measurements BitLocker relies on.
