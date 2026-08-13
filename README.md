@@ -78,6 +78,7 @@ or enrollment fails.
 The device appeared under **Intune → Devices → All devices** and under **Entra
 ID → Devices**, confirming both the directory object and MDM management.
 
-<img width="1306" height="565" alt="image" src="https://github.com/user-attachments/assets/9704042d-fd1b-416a-83f9-b80e86e2184c" />
+<img width="1909" height="948" alt="image" src="https://github.com/user-attachments/assets/96b86a2c-0b17-44f7-a820-ab5e052c0223" />
+
 
 
