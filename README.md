@@ -54,6 +54,7 @@ than abstracting it behind Autopilot:
 standard user account created in Step 1.
 
 <img width="903" height="773" alt="image" src="https://github.com/user-attachments/assets/a40abb3b-20d5-424a-927d-8f62c4aa48c4" />
+<img width="720" height="640" alt="image" src="https://github.com/user-attachments/assets/ed35f20b-2088-4ffe-b13d-60322fa6ba7c" />
 
 
 This performs a **Microsoft Entra join** — the work account becomes the primary
