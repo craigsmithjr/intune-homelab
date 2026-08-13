@@ -180,3 +180,35 @@ non-applicable devices. Two additional reports are available:
 
 <img width="1642" height="942" alt="image" src="https://github.com/user-attachments/assets/37799ebb-77e1-4726-96a9-311eca4acb48" />
 
+## Step 5 — Application Deployment
+
+Zoom was deployed as the test application. Three approaches were attempted; the
+first two failed for different reasons, and the failures are more instructive
+than the eventual success.
+
+### Attempt 1 — Microsoft Store app (new)
+
+**Apps → Windows → Add → Microsoft Store app (new)**
+
+The app creation failed immediately with:
+
+> The selected app does not have a valid latest package version.
+
+The Store (new) app type is backed by winget and requires the Store catalog
+entry to carry an installable package. Zoom's listing points at the vendor's own
+installer rather than a packaged Store app, so there is nothing for Intune to
+retrieve. Nothing was misconfigured — this app type simply cannot deploy this
+app.
+
+### Attempt 2 — Line-of-business app, assigned to a user group
+
+**Apps → Windows → Add → Line-of-business app**, uploading `ZoomInstallerFull.msi`
+(202 MiB, the per-machine MSI from Zoom's IT admin download page — not the
+per-user `.exe` from the standard download page).
+
+<img width="1629" height="865" alt="image" src="https://github.com/user-attachments/assets/27d8c8a2-0970-40cd-af57-88f38d7d527e" />
+
+Assigned as **Required** to a group containing the test *user*. The install
+reported Pending, then Failed. Nothing appeared in Program Files, Program Files
+(x86), or any Uninstall registry key.
+
