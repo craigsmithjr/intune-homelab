@@ -143,3 +143,40 @@ matches the rule joins automatically and receives the baseline policy set with
 no administrative action. **Dynamic rules processing status: Succeeded**
 confirms the rule evaluated without error.
 
+## Step 4 — Endpoint Security: Defender Antivirus
+
+With the target group in place, a Defender Antivirus policy was created to serve
+as the security baseline for all corporate Windows devices.
+
+**Endpoint security → Antivirus → Create Policy → Windows → Microsoft Defender
+Antivirus**
+
+<img width="1641" height="876" alt="image" src="https://github.com/user-attachments/assets/0d6e049b-1867-40f7-8643-b2f2ab42d6c6" />
+
+
+| Property | Value |
+|---|---|
+| Name | Security baseline / Defender AV policy |
+| Platform | Windows |
+| Profile | Microsoft Defender Antivirus |
+| Assigned to | `SG-DEV-WIN-Corporate` |
+
+### Why Endpoint Security rather than Settings Catalog
+
+Defender settings exist in both places — Endpoint Security policies are built on
+the same underlying configuration engine. Endpoint Security was chosen because
+it provides a curated view with dedicated per-setting reporting, and it is where
+a reviewer expects to find the workload.
+
+**Configuring the same setting in both places creates a conflict**, and when two
+policies set the same value differently, neither applies — the setting reverts
+to unmanaged. Security Baselines are a common source of this, since they set
+hundreds of Defender values on their own. One owner per setting.
+
+### Verification
+
+The console reported **Succeeded: 1** with no errors, conflicts, or
+non-applicable devices. Two additional reports are available:
+
+<img width="1642" height="942" alt="image" src="https://github.com/user-attachments/assets/37799ebb-77e1-4726-96a9-311eca4acb48" />
+
