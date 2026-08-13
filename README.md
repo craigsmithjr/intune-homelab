@@ -81,4 +81,25 @@ ID → Devices**, confirming both the directory object and MDM management.
 <img width="1909" height="948" alt="image" src="https://github.com/user-attachments/assets/96b86a2c-0b17-44f7-a820-ab5e052c0223" />
 
 
+### Single Sign-On
 
+Once the device is Entra joined, signing into a Microsoft app requires no
+password prompt — the app picks up the existing session and authenticates
+silently.
+
+
+
+https://github.com/user-attachments/assets/383d45a3-4e35-4ac1-9588-efa0c03f5be9
+
+
+
+This is a property of the join type rather than of Intune itself. Entra join
+issues the device a **Primary Refresh Token (PRT)** at Windows sign-in, and
+Microsoft apps redeem that token for access rather than prompting for
+credentials. An Entra *registered* device gets SSO only for the work account and
+its apps; a *joined* device gets it device-wide.
+
+Practical effect: fewer prompts, no stored passwords in individual apps, and
+authentication that Conditional Access can evaluate centrally — the same PRT
+carries device state, which is what later allows a policy to require a compliant
+device before granting access.
