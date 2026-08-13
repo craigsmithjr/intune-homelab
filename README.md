@@ -209,6 +209,9 @@ per-user `.exe` from the standard download page).
 
 <img width="1629" height="865" alt="image" src="https://github.com/user-attachments/assets/27d8c8a2-0970-40cd-af57-88f38d7d527e" />
 
+<img width="1008" height="757" alt="image" src="https://github.com/user-attachments/assets/10d9e884-c2e7-48e2-8703-ef06592d3306" />
+
+
 Assigned as **Required** to a group containing the test *user*. The install
 reported Pending, then Failed. Nothing appeared in Program Files, Program Files
 (x86), or any Uninstall registry key.
