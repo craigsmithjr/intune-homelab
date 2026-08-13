@@ -48,7 +48,7 @@ environment afterwards, which changes the measurements BitLocker relies on.
 ### Enrolling the device
 
 Enrollment was performed manually from the endpoint to see the full flow rather
-than abstracting it behind Autopilot:
+than abstracting it behind Autopilot.
 
 **Settings → Accounts → Access work or school → Connect**, signing in with the
 standard user account created in Step 1.
@@ -176,7 +176,7 @@ hundreds of Defender values on their own. One owner per setting.
 ### Verification
 
 The console reported **Succeeded: 1** with no errors, conflicts, or
-non-applicable devices. Two additional reports are available:
+non-applicable devices.
 
 <img width="1642" height="942" alt="image" src="https://github.com/user-attachments/assets/37799ebb-77e1-4726-96a9-311eca4acb48" />
 
@@ -222,7 +222,7 @@ sync, the install completed and Zoom appeared on the endpoint.
 ## Conclusion
 
 This lab covers the core of cloud-native Windows endpoint management: tenant and
-user setup, Entra join and Intune enrollment, dynamic group design, an Endpoint
+user setup, Entra join and Intune enrollment, dynamic group design, an Endpoint.
 Security baseline, and application deployment — each verified from the endpoint
 rather than from the admin console alone.
 
@@ -232,7 +232,7 @@ correct context and silently never completed, with no error surfaced beyond
 "Failed" and no entry in the log that most guidance points to
 A recurring theme: **the console is not the endpoint.** Intune reporting lags the
 device by up to an hour, a policy showing "Succeeded" only confirms delivery
-rather than effect
+rather than effect.
 
 ### Next steps
 
