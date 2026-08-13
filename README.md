@@ -109,3 +109,37 @@ device before granting access.
 With enrollment complete, the device appears under **Intune → Devices → All
 devices** as a fully managed endpoint.
 <img width="1575" height="865" alt="image" src="https://github.com/user-attachments/assets/702fe995-773e-4cec-a158-0cf0ab92f40e" />
+
+## Step 3 — Group Design
+
+Policy in Intune is assigned to Entra groups, so group structure determines what
+is manageable. A dynamic device group was created as the baseline target for all
+corporate Windows endpoints.
+
+<img width="1643" height="927" alt="image" src="https://github.com/user-attachments/assets/7e803cd6-7a1f-4eec-bc9f-a1bb8147d1f4" />
+
+| Property | Value |
+|---|---|
+| Name | `SG-DEV-WIN-Corporate` |
+| Type | Security |
+| Membership type | Dynamic Device |
+| Source | Cloud |
+
+### Naming convention
+
+`SG-DEV-WIN-Corporate` breaks down as:
+
+| Segment | Meaning |
+|---|---|
+| `SG` | Security group — distinguishes it from M365 groups and distribution lists |
+| `DEV` | Contains **devices**, not users |
+| `WIN` | Windows platform |
+| `Corporate` | Corporate-owned, as opposed to personal |
+
+### Why dynamic
+
+Membership is rule-driven rather than manual. A newly enrolled device that
+matches the rule joins automatically and receives the baseline policy set with
+no administrative action. **Dynamic rules processing status: Succeeded**
+confirms the rule evaluated without error.
+
