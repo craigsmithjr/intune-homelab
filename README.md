@@ -26,7 +26,8 @@ non-privileged account.
 
 **Microsoft 365 admin center → Users → Active users → Add a user**
 
-![Add a user – Set up the basics](images/01-add-user-basics.png)
+<img width="1386" height="901" alt="image" src="https://github.com/user-attachments/assets/5e337351-a8b2-4291-941d-faa442c26824" />
+
 
 | Field | Value |
 |---|---|
