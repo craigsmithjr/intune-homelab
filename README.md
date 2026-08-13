@@ -60,6 +60,9 @@ than abstracting it behind Autopilot:
 **Settings → Accounts → Access work or school → Connect**, signing in with the
 standard user account created in Step 1.
 
+<img width="903" height="773" alt="image" src="https://github.com/user-attachments/assets/a40abb3b-20d5-424a-927d-8f62c4aa48c4" />
+
+
 This performs a **Microsoft Entra join** — the work account becomes the primary
 identity on the device, rather than a registration layered on top of a personal
 account. The distinction matters:
