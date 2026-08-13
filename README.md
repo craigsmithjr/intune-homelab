@@ -78,11 +78,6 @@ or enrollment fails.
 The device appeared under **Intune → Devices → All devices** and under **Entra
 ID → Devices**, confirming both the directory object and MDM management.
 
+<img width="1306" height="565" alt="image" src="https://github.com/user-attachments/assets/9704042d-fd1b-416a-83f9-b80e86e2184c" />
 
-
-
-
-No admin roles were assigned. The account is a standard user by design, so that
-policy and app assignment can be tested against a realistic, non-privileged
-account rather than against Global Admin.
 
