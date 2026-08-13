@@ -29,13 +29,6 @@ non-privileged account.
 <img width="1386" height="901" alt="image" src="https://github.com/user-attachments/assets/5e337351-a8b2-4291-941d-faa442c26824" />
 
 
-| Field | Value |
-|---|---|
-| Display name | John Smith |
-| Username | `john.smith@CSIT040.onmicrosoft.com` |
-| Password | Auto-generated |
-| Change password at first sign-in | Enabled |
-
 The wizard continues through **Product licenses** and **Optional settings**. A
 Business Premium license was assigned here so the account could enroll a device
 — **Intune enrollment fails without a license, even when the user is in scope
